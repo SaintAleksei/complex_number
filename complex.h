@@ -1,6 +1,9 @@
-#include <stdio.h> 
-#include <stdlib.h>
-#include <math.h>
+#ifndef __COMPLEX
+#define __COMPLEX
+
+#include <cstdio>
+#include <cstdlib>
+#include <cmath>
 
 class complex_number
 {
@@ -35,3 +38,5 @@ public:
     complex_number operator= (const complex_number& num);
     bool operator== (const complex_number& left) const;
 };
+
+#endif
