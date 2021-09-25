@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> 
 #include <stdlib.h>
 #include <math.h>
 
@@ -9,23 +9,33 @@ private:
     double im_;
 
 public:
-    complex_number  (double re, double im);
-    complex_number  (const complex_number &num);
+    complex_number ();
+    complex_number (double re, double im);
+    complex_number (const complex_number &num);
+    ~complex_number ();
 
-    void set_re   (double re);
-    void set_im   (double im);
+    void set_re (double re);
+    void set_im (double im);
     
-    double get_re ();
-    double get_im ();
+    double get_re () const;
+    double get_im () const;
 
-    double abs ();
+    double abs () const;
 
-    void print ();
+    void print () const;
 
-    friend const complex_number operator+  (const complex_number& left, const complex_number& right); 
-    friend const complex_number operator+= (      complex_number& left, const complex_number& right);
-    friend const complex_number operator-  (const complex_number& left, const complex_number& right); 
-    friend const complex_number operator-= (      complex_number& left, const complex_number& right);
-    friend const complex_number operator*  (const complex_number& left, const complex_number& right); 
-    friend const complex_number operator*= (      complex_number& left, const complex_number& right);
+    complex_number operator+ (const complex_number& num) const;
+    complex_number operator+ () const;
+    complex_number operator+= (const complex_number& num);
+    complex_number operator- (const complex_number& num) const;
+    complex_number operator- () const;
+    complex_number operator-= (const complex_number& num);
+    complex_number operator* (const complex_number& num) const;
+    complex_number operator*= (const complex_number& num);
+    complex_number operator= (const complex_number& num);
+    bool operator== (const complex_number& left) const;
+
+/*
+    //добавить юнит тесты
+*/
 };
