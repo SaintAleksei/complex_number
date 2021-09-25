@@ -1,5 +1,5 @@
-#ifndef __COMPLEX
-#define __COMPLEX
+#ifndef __COMPLEX_H_INCLUDED
+#define __COMPLEX_H_IMCLUDED 1
 
 #include <cstdio>
 #include <cstdlib>
