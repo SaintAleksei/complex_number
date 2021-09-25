@@ -34,8 +34,4 @@ public:
     complex_number operator*= (const complex_number& num);
     complex_number operator= (const complex_number& num);
     bool operator== (const complex_number& left) const;
-
-/*
-    //добавить юнит тесты
-*/
 };
