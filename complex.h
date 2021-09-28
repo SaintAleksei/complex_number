@@ -1,10 +1,6 @@
 #ifndef __COMPLEX_H_INCLUDED
 #define __COMPLEX_H_IMCLUDED 1
 
-#include <cstdio>
-#include <cstdlib>
-#include <cmath>
-
 class complex_number
 {
 private:
@@ -29,13 +25,13 @@ public:
 
     complex_number operator+ (const complex_number& num) const;
     complex_number operator+ () const;
-    complex_number operator+= (const complex_number& num);
+    complex_number& operator+= (const complex_number& num);
     complex_number operator- (const complex_number& num) const;
     complex_number operator- () const;
-    complex_number operator-= (const complex_number& num);
+    complex_number& operator-= (const complex_number& num);
     complex_number operator* (const complex_number& num) const;
-    complex_number operator*= (const complex_number& num);
-    complex_number operator= (const complex_number& num);
+    complex_number& operator*= (const complex_number& num);
+    complex_number& operator= (const complex_number& num);
     bool operator== (const complex_number& left) const;
 };
 

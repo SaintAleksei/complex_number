@@ -1,4 +1,6 @@
 #include "complex.h"
+#include <cstdio>
+#include <cmath>
 
 complex_number::complex_number ()
 {
@@ -61,15 +63,15 @@ complex_number complex_number::operator+ (const complex_number &num) const
 
 complex_number complex_number::operator+ () const
 {
-    return complex_number (*this);
+    return *this;
 }
 
-complex_number complex_number::operator+= (const complex_number &num)
+complex_number& complex_number::operator+= (const complex_number &num)
 {
     this->re_ += num.re_;
     this->im_ += num.im_;
     
-    return complex_number (*this);
+    return *this;
 }
 
 complex_number complex_number::operator- (const complex_number &num) const
@@ -79,15 +81,15 @@ complex_number complex_number::operator- (const complex_number &num) const
 
 complex_number complex_number::operator- () const
 {
-    return complex_number (*this);
+    return *this;
 }
 
-complex_number complex_number::operator-= (const complex_number &num)
+complex_number& complex_number::operator-= (const complex_number &num)
 {
     this->re_ -= num.re_;
     this->im_ -= num.im_;
     
-    return complex_number (*this);
+    return *this;
 }
 
 complex_number complex_number::operator* (const complex_number &num) const
@@ -95,7 +97,7 @@ complex_number complex_number::operator* (const complex_number &num) const
     return complex_number (this->re_ * num.re_ - this->im_ * num.im_, this->re_ * num.im_ + this->im_ * num.re_);
 }
 
-complex_number complex_number::operator*= (const complex_number &num)
+complex_number& complex_number::operator*= (const complex_number &num)
 {   
     double im_copy = this->im_;
     double re_copy = this->re_;
@@ -103,15 +105,15 @@ complex_number complex_number::operator*= (const complex_number &num)
     this->re_ = re_copy * num.re_ - im_copy * num.im_;
     this->im_ = re_copy * num.im_ + im_copy * num.re_;
     
-    return complex_number (*this);
+    return *this;
 }
 
-complex_number complex_number::operator= (const complex_number &num)
+complex_number& complex_number::operator= (const complex_number &num)
 {
     this->re_ = num.re_;
     this->im_ = num.im_;
 
-    return complex_number (*this);
+    return *this;
 }
 
 bool complex_number::operator== (const complex_number &num) const

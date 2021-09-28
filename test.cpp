@@ -1,4 +1,5 @@
 #include "complex.h"
+#include <cstdio>
 
 #define __TEST_OPERATOR(op, a_re, a_im, b_re, b_im, c_re, c_im)\
     do \
