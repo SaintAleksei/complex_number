@@ -1,7 +1,7 @@
 #ifndef __COMPLEX_H_INCLUDED
-#define __COMPLEX_H_IMCLUDED 1
+#define __COMPLEX_H_INCLUDED
 
-class complex_number
+struct complex_number
 {
 private:
     double re_;

@@ -6,8 +6,9 @@
     {\
         complex_number a(a_re, a_im);\
         complex_number b(b_re, b_im);\
+        complex_number c_exp (c_re, c_im);\
         complex_number c(a op b);\
-        if (c.get_re () != c_re || c.get_im () != c_im)\
+        if (!(c_exp == c) )\
             printf ("__TEST_OPERATOR ("#op", "#a_re", "#a_im", "#b_re", "#b_im", "#c_re", "#c_im") FAILED: "\
                     "RESULT IS {%lg, %lg} BUT {%lg, %lg} WAS EXPECTED;\n", \
                     c.get_re (), c.get_im (), (double) c_re, (double) c_im);\
@@ -25,6 +26,7 @@ int main ()
     __TEST_OPERATOR (-=, 1, 2, 3, 4, -2, -2);
     __TEST_OPERATOR (*, 1, 2, 3, 4, -5, 10);
     __TEST_OPERATOR (*=, 1, 2, 3, 4, -5, 10);
+    __TEST_OPERATOR (=, 1, 2, 3, 4, 3, 4);
 
     return 0;
 }
