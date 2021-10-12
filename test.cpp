@@ -1,7 +1,7 @@
 #include "complex.h"
 #include <cstdio>
 
-#define __TEST_OPERATOR(op, a_re, a_im, b_re, b_im, c_re, c_im)\
+#define TEST_OPERATOR(op, a_re, a_im, b_re, b_im, c_re, c_im)\
     do \
     {\
         complex_number a(a_re, a_im);\
@@ -20,13 +20,13 @@
 
 int main ()
 {
-    __TEST_OPERATOR (+, 1, 2, 3, 4, 4, 6); 
-    __TEST_OPERATOR (+=, 1, 2, 3, 4, 4, 6);
-    __TEST_OPERATOR (-, 1, 2, 3, 4, -2, -2);
-    __TEST_OPERATOR (-=, 1, 2, 3, 4, -2, -2);
-    __TEST_OPERATOR (*, 1, 2, 3, 4, -5, 10);
-    __TEST_OPERATOR (*=, 1, 2, 3, 4, -5, 10);
-    __TEST_OPERATOR (=, 1, 2, 3, 4, 3, 4);
+    TEST_OPERATOR (+, 1, 2, 3, 4, 4, 6); 
+    TEST_OPERATOR (+=, 1, 2, 3, 4, 4, 6);
+    TEST_OPERATOR (-, 1, 2, 3, 4, -2, -2);
+    TEST_OPERATOR (-=, 1, 2, 3, 4, -2, -2);
+    TEST_OPERATOR (*, 1, 2, 3, 4, -5, 10);
+    TEST_OPERATOR (*=, 1, 2, 3, 4, -5, 10);
+    TEST_OPERATOR (=, 1, 2, 3, 4, 3, 4);
 
     return 0;
 }
